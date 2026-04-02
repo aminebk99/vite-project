@@ -236,6 +236,12 @@ VITE_API_URL=https://api.yourdomain.com
 
 ---
 
+{
+    "name": "John Doe",
+    "email": "john@example.com",
+    "password": "MyPass123!"
+}
+
 ## Security Features
 
 - **No tokens in browser storage** — JWT lives exclusively in an HttpOnly cookie set by the server; React never sees it
