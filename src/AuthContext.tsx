@@ -63,7 +63,7 @@ export function AuthProvider({ children }) {
       });
       if (!res.ok) throw new Error("unauthenticated");
       const user = await res.json();
-      dispatch({ type: "AUTH_SUCCESS", payload: user });
+      dispatch({ type: "AUTH_SUCCESS", payload: user.user });
     } catch {
       dispatch({ type: "AUTH_FAILURE" });
     }
@@ -94,7 +94,7 @@ export function AuthProvider({ children }) {
       }
 
       const user = await res.json();
-      dispatch({ type: "AUTH_SUCCESS", payload: user });
+      dispatch({ type: "AUTH_SUCCESS", payload: user.user });
       return true;
     } catch (err) {
       const msg =
